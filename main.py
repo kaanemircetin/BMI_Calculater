@@ -24,7 +24,7 @@ def bmi_calculater():
     elif 35 > num3 //(num4 ** 2) > 25:
         result2.config(text="You're overweight")
     elif num3 //(num4 ** 2) > 35:
-        result2.config(text="You're obesity")
+        result2.config(text="You're obese")
 
 
 main_name = tk.Label(text="BMI Calculater", foreground="black", font="Arial, 24")
