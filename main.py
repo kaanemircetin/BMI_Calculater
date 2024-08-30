@@ -17,6 +17,14 @@ def bmi_calculater():
     except ValueError:
         result.config(text="Write a number", font="Arial, 11")
         result.place(x=100, y=160)
+    if  num3 //(num4 ** 2)< 18.5:
+        result2.config(text="You're underweight")
+    elif 25 > num3 //(num4 ** 2) > 18.5:
+        result2.config(text="You're normal")
+    elif 35 > num3 //(num4 ** 2) > 25:
+        result2.config(text="You're overweight")
+    elif num3 //(num4 ** 2) > 35:
+        result2.config(text="You're obesity")
 
 
 main_name = tk.Label(text="BMI Calculater", foreground="black", font="Arial, 24")
@@ -36,6 +44,9 @@ my_button = tk.Button(text="calculate",
 
 result = tk.Label(text="BMI", font="Arial, 24", width=10)
 result.place(x=50, y=140)
+
+result2 = tk.Label(text="Your level", font="Arial, 24", width=10)
+result2.place(x=50, y=250)
 
 my_button.config(width=10)
 my_button.place(x=110, y=200)
