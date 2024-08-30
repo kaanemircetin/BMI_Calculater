@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import *
 
+
 window = Tk()
 window.title("BMI calculater")
 window.minsize(width=300, height=300)
@@ -12,20 +13,20 @@ def bmi_calculater():
         num2 = height_value.get()
         num3 = int(num1)
         num4 = float(num2)
-        label3.config(text=(num3 // (num4 ** 2)))
+        result.config(text=(num3 // (num4 ** 2)))
     except ValueError:
-        label3.config(text="Write a number", font="Arial, 11")
-        label3.place(x=100, y=160)
+        result.config(text="Write a number", font="Arial, 11")
+        result.place(x=100, y=160)
 
 
-label_main = tk.Label(text="BMI Calculater", foreground="black", font="Arial, 24")
-label_main.pack()
+main_name = tk.Label(text="BMI Calculater", foreground="black", font="Arial, 24")
+main_name.pack()
 
-label1 = tk.Label(text="Please write your weight (k)", font="Arial, 11")
-label1.place(x=11, y=70)
+question_weight = tk.Label(text="Please write your weight (k)", font="Arial, 11")
+question_weight.place(x=11, y=70)
 
-label2 = tk.Label(text="Please write your height (m)", font="Arial, 11")
-label2.place(x=11, y=100)
+question_height = tk.Label(text="Please write your height (m)", font="Arial, 11")
+question_height.place(x=11, y=100)
 
 my_button = tk.Button(text="calculate",
                       foreground="black",
@@ -33,8 +34,8 @@ my_button = tk.Button(text="calculate",
                       activeforeground="white",
                       command=bmi_calculater)
 
-label3 = tk.Label(text="BMI", font="Arial, 24", width=10)
-label3.place(x=50, y=140)
+result = tk.Label(text="BMI", font="Arial, 24", width=10)
+result.place(x=50, y=140)
 
 my_button.config(width=10)
 my_button.place(x=110, y=200)
@@ -44,5 +45,6 @@ weight_value.place(x=195, y=70)
 
 height_value = tk.Entry(width=10)
 height_value.place(x=195, y=100)
+
 
 window.mainloop()
