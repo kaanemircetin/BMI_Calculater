@@ -8,8 +8,8 @@ window.minsize(width=300, height=300)
 
 def bmi_calculater():
     try:
-        num1 = my_entry.get()
-        num2 = my_entry1.get()
+        num1 = weight_value.get()
+        num2 = height_value.get()
         num3 = int(num1)
         num4 = float(num2)
         label3.config(text=(num3 // (num4 ** 2)))
@@ -39,10 +39,10 @@ label3.place(x=50, y=140)
 my_button.config(width=10)
 my_button.place(x=110, y=200)
 
-my_entry = tk.Entry(width=10)
-my_entry.place(x=195, y=70)
+weight_value = tk.Entry(width=10)
+weight_value.place(x=195, y=70)
 
-my_entry1 = tk.Entry(width=10)
-my_entry1.place(x=195, y=100)
+height_value = tk.Entry(width=10)
+height_value.place(x=195, y=100)
 
 window.mainloop()
