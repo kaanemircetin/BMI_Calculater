@@ -17,12 +17,14 @@ def bmi_calculater():
     except ValueError:
         result.config(text="Write a number", font="Arial, 11")
         result.place(x=100, y=160)
-    if  num3 //(num4 ** 2)< 18.5:
-        result2.config(text="You're underweight")
+    if num3 //(num4 ** 2)< 18.5:
+        result2.config(text="You're underweight", font="Arial, 15", width=30)
+        result2.place(x=-10, y=250)
     elif 25 > num3 //(num4 ** 2) > 18.5:
         result2.config(text="You're normal")
     elif 35 > num3 //(num4 ** 2) > 25:
-        result2.config(text="You're overweight")
+        result2.config(text="You're overweight", font="Arial, 15", width=30)
+        result2.place(x=-10, y=250)
     elif num3 //(num4 ** 2) > 35:
         result2.config(text="You're obese")
 
