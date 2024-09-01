@@ -3,11 +3,11 @@ from tkinter import *
 
 
 window = Tk()
-window.title("BMI calculater")
+window.title("BMI calculator")
 window.minsize(width=300, height=300)
 
 
-def bmi_calculater():
+def bmi_calculator():
     try:
         num1 = weight_value.get()
         num2 = height_value.get()
@@ -42,7 +42,7 @@ my_button = tk.Button(text="calculate",
                       foreground="black",
                       activebackground="red",
                       activeforeground="white",
-                      command=bmi_calculater)
+                      command=bmi_calculator)
 
 result = tk.Label(text="BMI", font="Arial, 24", width=10)
 result.place(x=50, y=140)
