@@ -29,7 +29,7 @@ def bmi_calculator():
         result2.config(text="You're obese")
 
 
-main_name = tk.Label(text="BMI Calculater", foreground="black", font="Arial, 24")
+main_name = tk.Label(text="BMI Calculator", foreground="black", font="Arial, 24")
 main_name.pack()
 
 question_weight = tk.Label(text="Please write your weight (k)", font="Arial, 11")
